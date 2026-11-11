@@ -1,0 +1,13 @@
+# Flaming Yak - Caddy Configuration
+# Serves all three domains with HTTPS via Let's Encrypt
+
+flamingyak.com, www.flamingyak.com, flamingyak.net, www.flamingyak.net, flamingyak.org, www.flamingyak.org {
+    # Root directory for static files
+    root * /var/www/html
+    
+    # Serve files from the root directory
+    file_server
+    
+    # Enable automatic HTTPS
+    # Caddy will automatically obtain and renew Let's Encrypt certificates
+}
